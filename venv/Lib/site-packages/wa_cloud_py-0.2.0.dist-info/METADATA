@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: wa-cloud-py
+Version: 0.2.0
+Summary: A Python library for sending WhatsApp messages using the WhatsApp Cloud API
+Author-email: Tanaka Mambinge <tmambingez@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests >=2.26.0
+Requires-Dist: loguru >=0.7.0
+Requires-Dist: pydantic >=2.0.0
+
+# WA Cloud Py
+
+wa_cloud_py is a Python library for sending WhatsApp messages using the WhatsApp Cloud API.
+
+## Installation
+
+To install the library, run the following command:
+
+```console
+pip install wa_cloud_py
+```
+
+## Usage
+
+Before using any of the features below, you need to create an instance of the `WhatsApp` class:
+
+```python
+from wa_cloud_py import WhatsApp
+
+whatsapp = WhatsApp(access_token="ACCESS_TOKEN", phone_number_id="PHONE_NUMBER_ID")
+```
+
+After creating the instance, you can use the following features:
+
+- [Send and receive messages](/docs/01_messaging.md) (text, image, audio, video, document, location, reaction)
+- [Share product catalog](/docs/02_commerce.md) with users
+- [Use commands or keyword](/docs/03_commands.md) based sytem to process user messages
+- [Update business profile](/docs/04_business_profile.md) so users can know more about your business
